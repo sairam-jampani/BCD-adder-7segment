@@ -152,6 +152,28 @@ BCD-Adder-Seven-Segment
 11. **FPGA Programming:** Program the generated bitstream onto the EDGE Artix-7 FPGA board.
 12. **Hardware Verification:** Verify the BCD addition result using the assigned switches, LEDs, and seven-segment display.
 
+---
+## 🧱 Block Design & HDL Wrapper
+
+The Vivado Block Design is used to connect the BCD Adder with the seven-segment display logic.
+
+### Creating the Block Design
+
+1. Select **Create Block Design** from the Vivado IP Integrator section.
+2. Enter a suitable name for the block design.
+3. Set the required connections according to the block diagram.
+4. For the required input signals, select **Make External**.
+5. Add the `uut` design to the block design.
+6. Add the `segment` module for the seven-segment display.
+7. Connect the modules according to the block diagram.
+8. Select **Regenerate Layout** to arrange the blocks.
+9. Select **Validate Design** to check the block design connections.
+10. Click on the block design name.
+11. Select **Create HDL Wrapper**.
+12. Select **Let Vivado manage wrapper and auto-update**.
+13. Set the generated HDL wrapper as the **Top** module.
+14. The design can now be **Elaborated Design** to view the complete block-level implementation.
+
 ### I/O Pin Assignment
 
 For 4-bit switch operations, the pins are assigned from right to left.
